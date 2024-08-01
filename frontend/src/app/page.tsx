@@ -10,10 +10,10 @@ import { Table } from "@/components/Table"; // Importe o componente da tabela
 export default function Home() {
 
   const cards = [
-    { color: "bg-orange-200", qty: "100", text: "Ambientes", icon: <FaBuilding size={48} /> },
-    { color: "bg-blue-200", qty: "100", text: "Equipamentos", icon: <MdForklift size={48} /> },
-    { color: "bg-red-200", qty: "100", text: "O.S. Abertas", icon: <GrNotes size={48} /> },
-    { color: "bg-green-200", qty: "100", text: "O.S. Concluídas", icon: <IoMdCheckboxOutline size={48} /> },
+    { color: "bg-orange-300", qty: "100", text: "Ambientes", icon: <FaBuilding size={48} /> },
+    { color: "bg-blue-300", qty: "100", text: "Equipamentos", icon: <MdForklift size={48} /> },
+    { color: "bg-red-100", qty: "100", text: "O.S. Abertas", icon: <GrNotes size={48} /> },
+    { color: "bg-purple-100", qty: "100", text: "O.S. Concluídas", icon: <IoMdCheckboxOutline size={48} /> },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       <div className="flex-1 flex">
         <Aside />
         <main className="flex-1 flex flex-col">
-          <h1 className="text-4xl font-bold uppercase w-full bg-white/40 p-6 text-center">
+          <h1 className="text-4xl font-bold uppercase w-full bg-slate-100/40 p-6 text-center">
             Sistema de Gestão de Manutenção
           </h1>
           <div>
