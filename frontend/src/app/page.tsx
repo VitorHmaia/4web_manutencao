@@ -5,7 +5,8 @@ import { MdForklift } from "react-icons/md";
 import { Footer } from "@/components/footer";
 import { Aside } from "@/components/aside";
 import { Card } from "@/components/card";
-import { Table } from "@/components/Table"; // Importe o componente da tabela
+import { Table } from "@/components/table";
+import { ModeToggle } from "@/components/ui/toggle-mode";
 
 export default function Home() {
 
@@ -20,15 +21,18 @@ export default function Home() {
     <div className="h-screen flex flex-col">
       <div className="flex-1 flex">
         <Aside />
-        <main className="flex-1 flex flex-col">
-          <h1 className="text-4xl font-bold uppercase w-full bg-slate-100/40 p-6 text-center">
+        <main className="flex-1 flex flex-col flex-wrap relative">
+          <div className="absolute top-4 right-4">
+            <ModeToggle/>
+          </div>
+          <h1 className="text-4xl font-extrabold tracking-tight uppercase w-full p-6 text-center">
             Sistema de Gestão de Manutenção
           </h1>
           <div>
             <div className="grid grid-cols-4 gap-4 p-6">
               {cards.map((props) => (
                 <Card
-                  key={props.text} // Adicione uma chave única para cada card
+                  key={props.text}
                   color={props.color}
                   qty={props.qty}
                   text={props.text}
